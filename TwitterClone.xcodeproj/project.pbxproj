@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44244EA41F66063D000E2C20 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44244EA31F66063D000E2C20 /* Cells.swift */; };
+		44244EA61F6606A9000E2C20 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44244EA51F6606A8000E2C20 /* HomeDatasource.swift */; };
 		44E24A801F62A06E0063EFB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A7F1F62A06E0063EFB8 /* AppDelegate.swift */; };
 		44E24A871F62A06E0063EFB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E24A861F62A06E0063EFB8 /* Assets.xcassets */; };
 		44E24A8A1F62A06E0063EFB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E24A881F62A06E0063EFB8 /* LaunchScreen.storyboard */; };
 		44E24A921F62A1930063EFB8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A911F62A1930063EFB8 /* HomeController.swift */; };
 		44E24A941F62A49E0063EFB8 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A931F62A49E0063EFB8 /* WordCell.swift */; };
+		44E24A961F62DE350063EFB8 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A951F62DE350063EFB8 /* HomeDatasourceController.swift */; };
 		7E3E2B979ABE0843A7FAB593 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034BDFE871C419A8E4672C6A /* Pods_TwitterClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		034BDFE871C419A8E4672C6A /* Pods_TwitterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF3C3AA6B136608BD7B5774 /* Pods-TwitterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClone/Pods-TwitterClone.debug.xcconfig"; sourceTree = "<group>"; };
+		44244EA31F66063D000E2C20 /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		44244EA51F6606A8000E2C20 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
 		44E24A7C1F62A06E0063EFB8 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E24A7F1F62A06E0063EFB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E24A861F62A06E0063EFB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,6 +30,7 @@
 		44E24A8B1F62A06E0063EFB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44E24A911F62A1930063EFB8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		44E24A931F62A49E0063EFB8 /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
+		44E24A951F62DE350063EFB8 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		482FC86D2A1F2FC1ACB0C39B /* Pods-TwitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClone/Pods-TwitterClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +54,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		44244E9F1F6605D1000E2C20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44244EA51F6606A8000E2C20 /* HomeDatasource.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		44244EA01F6605DD000E2C20 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44E24A951F62DE350063EFB8 /* HomeDatasourceController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		44244EA11F6605E6000E2C20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44244EA31F66063D000E2C20 /* Cells.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		44244EA21F660606000E2C20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44E24A7F1F62A06E0063EFB8 /* AppDelegate.swift */,
+				44E24A861F62A06E0063EFB8 /* Assets.xcassets */,
+				44E24A881F62A06E0063EFB8 /* LaunchScreen.storyboard */,
+				44E24A8B1F62A06E0063EFB8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		44E24A731F62A06E0063EFB8 = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +110,12 @@
 		44E24A7E1F62A06E0063EFB8 /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
-				44E24A7F1F62A06E0063EFB8 /* AppDelegate.swift */,
+				44244E9F1F6605D1000E2C20 /* Model */,
+				44244EA11F6605E6000E2C20 /* View */,
+				44244EA01F6605DD000E2C20 /* Controller */,
 				44E24A911F62A1930063EFB8 /* HomeController.swift */,
 				44E24A931F62A49E0063EFB8 /* WordCell.swift */,
-				44E24A861F62A06E0063EFB8 /* Assets.xcassets */,
-				44E24A881F62A06E0063EFB8 /* LaunchScreen.storyboard */,
-				44E24A8B1F62A06E0063EFB8 /* Info.plist */,
+				44244EA21F660606000E2C20 /* Supporting Files */,
 			);
 			path = TwitterClone;
 			sourceTree = "<group>";
@@ -218,8 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				44E24A941F62A49E0063EFB8 /* WordCell.swift in Sources */,
+				44E24A961F62DE350063EFB8 /* HomeDatasourceController.swift in Sources */,
 				44E24A801F62A06E0063EFB8 /* AppDelegate.swift in Sources */,
+				44244EA61F6606A9000E2C20 /* HomeDatasource.swift in Sources */,
 				44E24A921F62A1930063EFB8 /* HomeController.swift in Sources */,
+				44244EA41F66063D000E2C20 /* Cells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +421,7 @@
 				44E24A901F62A06E0063EFB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
