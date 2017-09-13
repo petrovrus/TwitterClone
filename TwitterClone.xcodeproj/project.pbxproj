@@ -17,6 +17,7 @@
 		44E24A921F62A1930063EFB8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A911F62A1930063EFB8 /* HomeController.swift */; };
 		44E24A941F62A49E0063EFB8 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A931F62A49E0063EFB8 /* WordCell.swift */; };
 		44E24A961F62DE350063EFB8 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A951F62DE350063EFB8 /* HomeDatasourceController.swift */; };
+		44FAE1401F69AD2C0023AE5D /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FAE13F1F69AD2C0023AE5D /* HomeDatasourceController+navbar.swift */; };
 		7E3E2B979ABE0843A7FAB593 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034BDFE871C419A8E4672C6A /* Pods_TwitterClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		44E24A911F62A1930063EFB8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		44E24A931F62A49E0063EFB8 /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 		44E24A951F62DE350063EFB8 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
+		44FAE13F1F69AD2C0023AE5D /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		482FC86D2A1F2FC1ACB0C39B /* Pods-TwitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClone/Pods-TwitterClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				44E24A951F62DE350063EFB8 /* HomeDatasourceController.swift */,
+				44FAE13F1F69AD2C0023AE5D /* HomeDatasourceController+navbar.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FAE1401F69AD2C0023AE5D /* HomeDatasourceController+navbar.swift in Sources */,
 				4410C4031F673A7E00BE20A2 /* UserCell.swift in Sources */,
 				44E24A941F62A49E0063EFB8 /* WordCell.swift in Sources */,
 				44E24A961F62DE350063EFB8 /* HomeDatasourceController.swift in Sources */,

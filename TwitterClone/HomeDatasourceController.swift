@@ -12,9 +12,12 @@ class HomeDatasourceController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBarItems()
+        
         let homeDatasource = HomeDatasource()
         self.datasource = homeDatasource
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
@@ -23,8 +26,6 @@ class HomeDatasourceController: DatasourceController {
     //MARK: item size
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let user = self.datasource?.item(indexPath) as? User {
-            print(user.bioText)
-            
             //get an estimation of the height of out cell, based on user's bio length
             
             let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 16
