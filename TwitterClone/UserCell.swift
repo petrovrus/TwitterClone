@@ -22,6 +22,7 @@ class UserCell: DatasourceCell {
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = #imageLiteral(resourceName: "twitterProfileImage")
         imageView.layer.cornerRadius = 5
         imageView.layer.masksToBounds = true
         return imageView
@@ -68,6 +69,7 @@ class UserCell: DatasourceCell {
     override func setupViews() {
         super.setupViews()
         
+        backgroundColor = UIColor.white
         
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)

@@ -19,7 +19,17 @@ class HomeDatasource: Datasource {
         return [ruslanUser, rayUser, ruslanUser2, rayUser2]
     }()
     
+    let tweets: [Tweet] = {
+        let ruslanUser = User(name: "Ruslan Petrov", username: "@iampetrovruslan", bioText: "Develop iOS apps and write about it. Study at HSE University in Moscow.", profileImage: #imageLiteral(resourceName: "twitterProfileImage"))
+        let tweet1 = Tweet(user: ruslanUser, message: "Let's pretend that message is a real tweet. How many characters are left? Probably very few.")
+        let tweet2 = Tweet(user: ruslanUser, message: "Another tweet. Let's make it short this time.")
+        return [tweet1, tweet2]
+    }()
+    
     override func item(_ indexPath: IndexPath) -> Any? {
+        if indexPath.section == 1 {
+            return tweets[indexPath.item]
+        }
         return users[indexPath.item]
     }
     
@@ -32,10 +42,17 @@ class HomeDatasource: Datasource {
     }
     
     override func cellClasses() -> [DatasourceCell.Type] {
-        return [UserCell.self]
+        return [UserCell.self, TweetCell.self]
+    }
+    
+    override func numberOfSections() -> Int {
+        return 2
     }
     
     override func numberOfItems(_ section: Int) -> Int {
+        if section == 1 {
+            return tweets.count
+        }
         return users.count
     }
 }
