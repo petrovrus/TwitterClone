@@ -26,63 +26,14 @@ class HomeDatasourceController: DatasourceController {
 //        let homeDatasource = HomeDatasource()
 //        self.datasource = homeDatasource
         
-        
-        
-        fetchHomeFeed()
-    }
-    
-    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
-    
-    /*
-    class Home: JSONDecodable {
-        
-        let users: [User]
-        required init(json: JSON) throws {
-            
-            
-            var users = [User]()
-            
-            let array = json["users"].array
-            for userJSON in array! {
-                let name = userJSON["name"].stringValue
-                let username = userJSON["username"].stringValue
-                let bio = userJSON["bio"].stringValue
-                
-                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
-                
-                users.append(user)
-            }
-            
-            self.users = users
-        }
-        
-    }
- */
-    
-    class JSONError: JSONDecodable {
-        required init(json: JSON) throws {
-            print("JSON Error")
-        }
-    }
-    
-    fileprivate func fetchHomeFeed() {
-        // start json fetch
-        
-        let request: APIRequest<HomeDatasource, JSONError> = tron.request("/twitter/home")
-        
-        request.perform(withSuccess: { (homeDatasource) in
-            print("Successfully fetched our json objects")
-            
-            print(homeDatasource.users.count)
-            
+//        fetchHomeFeed()
+        Service.sharedInstance.fetchHomeFeed { (homeDatasource) in
             self.datasource = homeDatasource
-        }) { (err) in
-            print("Failed to fetch json", err)
         }
-        
-        
     }
     
+    
+    //MARK: spacing between sections
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

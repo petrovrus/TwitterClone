@@ -11,11 +11,10 @@
 		4410C4031F673A7E00BE20A2 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410C4021F673A7E00BE20A2 /* UserCell.swift */; };
 		44244EA41F66063D000E2C20 /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44244EA31F66063D000E2C20 /* UserHeaderFooter.swift */; };
 		44244EA61F6606A9000E2C20 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44244EA51F6606A8000E2C20 /* HomeDatasource.swift */; };
+		443B95C91F6ACC9600785E15 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443B95C81F6ACC9600785E15 /* Service.swift */; };
 		44E24A801F62A06E0063EFB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A7F1F62A06E0063EFB8 /* AppDelegate.swift */; };
 		44E24A871F62A06E0063EFB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E24A861F62A06E0063EFB8 /* Assets.xcassets */; };
 		44E24A8A1F62A06E0063EFB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E24A881F62A06E0063EFB8 /* LaunchScreen.storyboard */; };
-		44E24A921F62A1930063EFB8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A911F62A1930063EFB8 /* HomeController.swift */; };
-		44E24A941F62A49E0063EFB8 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A931F62A49E0063EFB8 /* WordCell.swift */; };
 		44E24A961F62DE350063EFB8 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E24A951F62DE350063EFB8 /* HomeDatasourceController.swift */; };
 		44FAE1401F69AD2C0023AE5D /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FAE13F1F69AD2C0023AE5D /* HomeDatasourceController+navbar.swift */; };
 		44FAE1421F69B9CE0023AE5D /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FAE1411F69B9CE0023AE5D /* TweetCell.swift */; };
@@ -30,13 +29,12 @@
 		4410C4021F673A7E00BE20A2 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		44244EA31F66063D000E2C20 /* UserHeaderFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		44244EA51F6606A8000E2C20 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
+		443B95C81F6ACC9600785E15 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		44E24A7C1F62A06E0063EFB8 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E24A7F1F62A06E0063EFB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E24A861F62A06E0063EFB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44E24A891F62A06E0063EFB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44E24A8B1F62A06E0063EFB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44E24A911F62A1930063EFB8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		44E24A931F62A49E0063EFB8 /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 		44E24A951F62DE350063EFB8 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		44FAE13F1F69AD2C0023AE5D /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		44FAE1411F69B9CE0023AE5D /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
@@ -104,6 +102,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		443B95C71F6ACC8200785E15 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				443B95C81F6ACC9600785E15 /* Service.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		44E24A731F62A06E0063EFB8 = {
 			isa = PBXGroup;
 			children = (
@@ -125,11 +131,10 @@
 		44E24A7E1F62A06E0063EFB8 /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				443B95C71F6ACC8200785E15 /* Service */,
 				44244E9F1F6605D1000E2C20 /* Model */,
 				44244EA11F6605E6000E2C20 /* View */,
 				44244EA01F6605DD000E2C20 /* Controller */,
-				44E24A911F62A1930063EFB8 /* HomeController.swift */,
-				44E24A931F62A49E0063EFB8 /* WordCell.swift */,
 				44244EA21F660606000E2C20 /* Supporting Files */,
 			);
 			path = TwitterClone;
@@ -281,11 +286,10 @@
 			files = (
 				44FAE1401F69AD2C0023AE5D /* HomeDatasourceController+navbar.swift in Sources */,
 				4410C4031F673A7E00BE20A2 /* UserCell.swift in Sources */,
-				44E24A941F62A49E0063EFB8 /* WordCell.swift in Sources */,
 				44E24A961F62DE350063EFB8 /* HomeDatasourceController.swift in Sources */,
 				44E24A801F62A06E0063EFB8 /* AppDelegate.swift in Sources */,
+				443B95C91F6ACC9600785E15 /* Service.swift in Sources */,
 				44244EA61F6606A9000E2C20 /* HomeDatasource.swift in Sources */,
-				44E24A921F62A1930063EFB8 /* HomeController.swift in Sources */,
 				44FAE1421F69B9CE0023AE5D /* TweetCell.swift in Sources */,
 				44244EA41F66063D000E2C20 /* UserHeaderFooter.swift in Sources */,
 				4410C4011F670E5500BE20A2 /* User.swift in Sources */,
