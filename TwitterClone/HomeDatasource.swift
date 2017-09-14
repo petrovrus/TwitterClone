@@ -16,12 +16,13 @@ class HomeDatasource: Datasource, JSONDecodable {
     let tweets: [Tweet]
 
     required init(json: JSON) throws {
+        guard let usersJSONArray = json["users"].array,
+            let tweetsJSONArray = json["tweets"].array else {
+            throw NSError(domain: "edu.hse.rapetrov.TwitterClone", code: 1, userInfo: [NSLocalizedDescriptionKey: "parsing JSON was not valid"])
+        }
         
-        let usersJSONArray = json["users"].array
-        self.users = usersJSONArray!.map { User(json: $0) }
-
-        let tweetsJSONArray = json["tweets"].array
-        self.tweets = tweetsJSONArray!.map { Tweet(json: $0) }
+        self.users = usersJSONArray.map { User(json: $0) }
+        self.tweets = tweetsJSONArray.map { Tweet(json: $0) }
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
