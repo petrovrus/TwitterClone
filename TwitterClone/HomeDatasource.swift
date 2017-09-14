@@ -7,17 +7,28 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
-class HomeDatasource: Datasource {
+class HomeDatasource: Datasource, JSONDecodable {
     
-    let users: [User] = {
-        let ruslanUser = User(name: "Ruslan Petrov", username: "@iampetrovruslan", bioText: "Develop iOS apps and write about it. Study at HSE University in Moscow.", profileImage: #imageLiteral(resourceName: "twitterProfileImage"))
-        let rayUser = User(name: "Ray Wenderlich", username: "@rwenderlich", bioText: "Ray Wenderlich is an iPhone developer and tweets on topics related to iPhone, software and gaming. Check out our conference.", profileImage: #imageLiteral(resourceName: "rayProfileImage"))
-        let ruslanUser2 = User(name: "Not Ruslan Petrov", username: "@iamnotpetrovruslan", bioText: "TEST TEST TEST", profileImage: #imageLiteral(resourceName: "twitterProfileImage"))
-        let rayUser2 = User(name: "Not Ray Wenderlich", username: "@notrwenderlich", bioText: "Ray Wenderlich is an iPhone developer and tweets on topics related to iPhone, software and gaming. Check out our conference. And one more sentense. And one more sentense. And one more sentense.", profileImage: #imageLiteral(resourceName: "rayProfileImage"))
+    let users: [User]
+    required init(json: JSON) throws {
+        var users = [User]()
         
-        return [ruslanUser, rayUser, ruslanUser2, rayUser2]
-    }()
+        let array = json["users"].array
+        for userJSON in array! {
+            let name = userJSON["name"].stringValue
+            let username = userJSON["username"].stringValue
+            let bio = userJSON["bio"].stringValue
+            
+            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            
+            users.append(user)
+        }
+        
+        self.users = users
+    }
     
     let tweets: [Tweet] = {
         let ruslanUser = User(name: "Ruslan Petrov", username: "@iampetrovruslan", bioText: "Develop iOS apps and write about it. Study at HSE University in Moscow.", profileImage: #imageLiteral(resourceName: "twitterProfileImage"))

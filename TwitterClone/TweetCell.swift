@@ -105,7 +105,6 @@ class TweetCell: DatasourceCell {
 
         setupBottomButtons()
         
-        
     }
     
     fileprivate func setupBottomButtons() {
