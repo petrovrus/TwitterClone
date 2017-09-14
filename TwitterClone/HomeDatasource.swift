@@ -10,6 +10,12 @@ import LBTAComponents
 import TRON
 import SwiftyJSON
 
+extension Collection where Iterator.Element == JSON {
+    func decode<T: JSONDecodable>() throws -> [T] {
+        return try map { try T(json: $0) }
+    }
+}
+
 class HomeDatasource: Datasource, JSONDecodable {
     
     let users: [User]
@@ -21,8 +27,8 @@ class HomeDatasource: Datasource, JSONDecodable {
             throw NSError(domain: "edu.hse.rapetrov.TwitterClone", code: 1, userInfo: [NSLocalizedDescriptionKey: "parsing JSON was not valid"])
         }
         
-        self.users = usersJSONArray.map { User(json: $0) }
-        self.tweets = tweetsJSONArray.map { Tweet(json: $0) }
+        self.users = try usersJSONArray.decode()
+        self.tweets = try tweetsJSONArray.decode()
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
