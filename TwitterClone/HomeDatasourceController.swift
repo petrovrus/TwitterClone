@@ -22,16 +22,11 @@ class HomeDatasourceController: DatasourceController {
         collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
         
         setupNavigationBarItems()
-        
-//        let homeDatasource = HomeDatasource()
-//        self.datasource = homeDatasource
-        
-//        fetchHomeFeed()
+
         Service.sharedInstance.fetchHomeFeed { (homeDatasource) in
             self.datasource = homeDatasource
         }
     }
-    
     
     //MARK: spacing between sections
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

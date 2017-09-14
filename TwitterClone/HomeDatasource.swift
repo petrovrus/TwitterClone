@@ -13,29 +13,16 @@ import SwiftyJSON
 class HomeDatasource: Datasource, JSONDecodable {
     
     let users: [User]
+    let tweets: [Tweet]
+
     required init(json: JSON) throws {
-        var users = [User]()
         
-        let array = json["users"].array
-        for userJSON in array! {
-            let name = userJSON["name"].stringValue
-            let username = userJSON["username"].stringValue
-            let bio = userJSON["bio"].stringValue
-            
-            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
-            
-            users.append(user)
-        }
-        
-        self.users = users
+        let usersJSONArray = json["users"].array
+        self.users = usersJSONArray!.map { User(json: $0) }
+
+        let tweetsJSONArray = json["tweets"].array
+        self.tweets = tweetsJSONArray!.map { Tweet(json: $0) }
     }
-    
-    let tweets: [Tweet] = {
-        let ruslanUser = User(name: "Ruslan Petrov", username: "@iampetrovruslan", bioText: "Develop iOS apps and write about it. Study at HSE University in Moscow.", profileImage: #imageLiteral(resourceName: "twitterProfileImage"))
-        let tweet1 = Tweet(user: ruslanUser, message: "Let's pretend that message is a real tweet. How many characters are left? Probably very few.")
-        let tweet2 = Tweet(user: ruslanUser, message: "Another tweet. Let's make it short this time.")
-        return [tweet1, tweet2]
-    }()
     
     override func item(_ indexPath: IndexPath) -> Any? {
         if indexPath.section == 1 {
